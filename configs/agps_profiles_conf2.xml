@@ -303,11 +303,7 @@
         available value: true (default), false
 
     e911_open_gps:
-        enable/disable opening GPS earlier when E911 call is dialed
-
-    tc10_ignore_fw_config:
-        enable/disable TC10's configuration from FWK
-
+        enable/disable opening GPS icon when E911 call is dialed
   -->
   <agps_setting
     agps_enable="true"
@@ -315,7 +311,6 @@
     gpevt="false"
     e911_gps_icon_enable="false"
     e911_open_gps="false"
-    tc10_ignore_fw_config="false"
   />
 
 
@@ -325,24 +320,29 @@
         enable/disable SIB8/SIB16
         available value: true (default), false
 
+    glonass_satellite_enable:
+        enable/disable Glonass Satellite if hardware can support Glonass
+        available value: true (default), false
+
+    beidou_satellite_enable:
+        enable/disable Beidou Satellite if hardware can support Beidou
+        available value: true (default), false
+
+    galileo__satellite_enable:
+        enable/disable Galileo Satellite if hardware can support Galileo
+        available value: true (default), false
+
     a_glonass_satellite_enable:
         enable/disable Glonass aiding if hardware can support A-Glonass
         available value: true (default), false
 
-    a_beidou_satellite_enable:
-        enable/disable Beidou aiding if hardware can support A-Beidou
-        available value: true, false (default)
-
-    a_galileo__satellite_enable:
-        enable/disable Galileo aiding if hardware can support A-Galileo
-        available value: true, false (default)
-
   -->
   <gnss_setting
     sib8_16_enable="true"
+    glonass_satellite_enable="true"
+    beidou_satellite_enable="true"
+    galileo_satellite_enable="true"
     a_glonass_satellite_enable="true"
-    a_beidou_satellite_enable="false"
-    a_galileo_satellite_enable="false"
   />
 
   <!-- cp_setting
@@ -377,21 +377,6 @@
         specify the LPP payload in the EPC-MOLR message in hexString format (ex: "010203ff" = { 0x01, 0x02, 0x03, 0xff }
         the purpose of this parameter is used for LAB testing only, please do not change it.
 
-    reject_non911_nilr_enable:
-        enable/disable to reject non911 NILR request
-        available value: true, false (default)
-
-	cp_2g_disable:
-		enable/disable CP GSM functionality
-        available value: true, false (default)
-
-	cp_3g_disable:
-		enable/disable CP UMTS functionality
-        available value: true, false (default)
-
-	cp_4g_disable:
-		enable/disable CP LTE functionality
-        available value: true, false (default)
   -->
   <cp_setting
     molr_pos_method="0"
@@ -402,10 +387,6 @@
     cp_auto_reset="false"
     epc_molr_lpp_payload_enable="false"
     epc_molr_lpp_payload="D2000010237B2026404FB8007202BFFFFFFFF80000000020C0000100940FB9001202B7FFFFF8000000000061800002018A00"
-    reject_non911_nilr_enable="false"
-    cp_2g_disable="false"
-    cp_3g_disable="false"
-    cp_4g_disable="false"
   />
 
   <!-- up_setting
@@ -504,10 +485,6 @@
         enable/disable the auto profile configuration based on current mcc or mcc_mnc specified in cur_supl_profile or supl_profile
         available value: true (default), false
 
-    ut1:
-        customize the SUPL UT1 timer
-        available value: 1~60, default value is 11 (OMA spec)
-
     ut2:
         customize the SUPL UT2 timer
         available value: 1~60, default value is 11 (OMA spec)
@@ -534,22 +511,6 @@
         Service Indicator of SUPL version for ULP
         available value: 0~255, default value is 0
         choosable value in LocationEM: 0~5
-    tls_reuse_enable:
-        enable/disable tls session reuse mode
-        available value: true, false (default)
-    imsi_cache_enable:
-        enable/disable the IMSI cache mechanism
-        available value: true, false (default)
-    supl_raw_data_enable:
-        enable/disable SUPL raw data dump to main log (logcat)
-        available value: true, false (default)
-    allow_ni_for_gps_off:
-        allow NI request when GPS is off in location setting
-        available value: true, false (default)
-    force_otdoa_assist_req:
-        force to fill otdoa assistance request when posMethod=agpsSETassisted,agpsSETassistedpref,ver2-agnssSETassisted or agnssSETassistedpref
-        Notice that some servers may not allow to get otdoa assistance request when posMethod is not OTDOA
-        available value: true, false (default)
   -->
   <up_setting
     ca_enable="false"
@@ -577,7 +538,6 @@
     lpp_enable="true"
     cert_from_sdcard="true"
     auto_profile_enable="true"
-    ut1="11"
     ut2="11"
     ut3="10"
     sync_to_slp="false"
@@ -585,11 +545,6 @@
     no_sensitive_log="false"
     supl_ver_minor="0"
     supl_ver_ser_ind="0"
-    tls_reuse_enable="false"
-    imsi_cache_enable="false"
-    supl_raw_data_enable="false"
-    allow_ni_for_gps_off="false"
-    force_otdoa_assist_req="false"
   />
 
 </mtk_agps_profiles>

@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_Rainbow.mk
+    $(LOCAL_DIR)/lineage_Rainbow.mk
