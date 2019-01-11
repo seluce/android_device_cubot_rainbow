@@ -13,5 +13,5 @@ $(call inherit-product, device/CUBOT/Rainbow/device_Rainbow.mk)
 PRODUCT_DEVICE := Rainbow
 PRODUCT_NAME := lineage_Rainbow
 PRODUCT_BRAND := CUBOT
-PRODUCT_MODEL := Rainbow
+PRODUCT_MODEL := CUBOT Rainbow
 PRODUCT_MANUFACTURER := CUBOT
