@@ -148,6 +148,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	gps.mt6580
 
+# YGPS
+PRODUCT_PACKAGES += \
+    YGPS
+
 # MiraVision
 PRODUCT_PACKAGES += \
 	MiraVision
