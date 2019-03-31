@@ -15,8 +15,8 @@ PRODUCT_MODEL := CUBOT Rainbow
 PRODUCT_MANUFACTURER := CUBOT
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=CUBOT/lineage_Rainbow/Rainbow:7.1.2/NJH47F/seluce_02051933:userdebug/release-keys \
-    PRIVATE_BUILD_DESC="lineage_Rainbow-userdebug 7.1.2 NJH47F dev.seluce_.20180205.193358 release-keys"
+    BUILD_FINGERPRINT=CUBOT/RAINBOW/RAINBOW:6.0/MRA58K/20160517.104317:user/release-keys \
+    PRIVATE_BUILD_DESC="full_w363-user 6.0 MRA58K 1510826339 release-keys"
 
 # SuperUser
 WITH_SU := false
