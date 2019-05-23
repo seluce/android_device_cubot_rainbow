@@ -31,7 +31,7 @@ patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0001-Fix-Minior-B
 patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0002-frameworks_base.patch
 patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0003-fix-out-of-memory-gl-crashes.patch
 patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0004-show-carrier-name.patch
-# only use the patch for /e/ 0.1 rom to fix MicroG signature spooing
+# only use the optional patch for LineageOS to fix MicroG signature spoofing
 # patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0005-frameworks_base_signature_spoofing.patch
 cd ../..
 cd system/netd
