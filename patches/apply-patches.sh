@@ -31,8 +31,9 @@ patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0001-Fix-Minior-B
 patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0002-frameworks_base.patch
 patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0003-fix-out-of-memory-gl-crashes.patch
 patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0004-show-carrier-name.patch
-# only use the optional patch for LineageOS to fix MicroG signature spoofing
-# patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0005-frameworks_base_signature_spoofing.patch
+# only use the optional patch for LineageOS and /e/ to fix MicroG signature spoofing
+# patch -p1 < ../../device/CUBOT/Echo/patches/frameworks_base/0005-frameworks_base_signature_spoofing.patch
+# git clean -f -d
 cd ../..
 cd system/netd
 patch -p1 < ../../device/CUBOT/Rainbow/patches/system_netd/0001-wifi-tethering-fix.patch
