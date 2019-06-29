@@ -219,6 +219,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lights.mt6580
 
+# Power
+PRODUCT_PACKAGES += \
+    power.mt6580
+
 # Sensor Calibration
 PRODUCT_PACKAGES += libem_sensor_jni
 
