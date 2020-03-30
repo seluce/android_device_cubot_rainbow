@@ -1,9 +1,12 @@
 #!/bin/bash
 cd ../../../..
 cd packages/apps/Settings
-patch -p1 < ../../../device/CUBOT/Rainbow/patches/package_apps_settings/0001-add-MiraVision-in-Settings.patch
-patch -p1 -b < ../../../device/CUBOT/Rainbow/patches/package_apps_settings/0002-android_settings_developer_info.patch
+patch -p1 < ../../../device/CUBOT/Rainbow/patches/packages_apps_settings/0001-add-MiraVision-in-Settings.patch
+patch -p1 -b < ../../../device/CUBOT/Rainbow/patches/packages_apps_settings/0002-android_settings_developer_info.patch
 git clean -f -d
+cd ../../..
+cd packages/apps/FMRadio
+patch -p1 < ../../../device/CUBOT/Rainbow/patches/packages_apps_FMRadio/0001-fix-fm-radio-power-up-mt6737m-mt6627-chip.patch
 cd ../../..
 cd system/core
 patch -p1 < ../../device/CUBOT/Rainbow/patches/system_core/0001-Fix-Liblog-printif.patch
@@ -12,7 +15,6 @@ patch -p1 < ../../device/CUBOT/Rainbow/patches/system_core/0003-Remove-CAP_SYS_N
 patch -p1 < ../../device/CUBOT/Rainbow/patches/system_core/0004-libnetutils-add-MTK-bits-ifc_ccmni_md_cfg.patch
 patch -p1 < ../../device/CUBOT/Rainbow/patches/system_core/0005-PATCH-xen0n-some-MTK-services-e.g.-ril-daemon-mtk-re.patch
 patch -p1 < ../../device/CUBOT/Rainbow/patches/system_core/0006-healthd-correctly-report-battery-voltage-on-MTK-kernels.patch
-patch -p1 < ../../device/CUBOT/Rainbow/patches/system_core/0007-use-mtk-serial-number.patch
 cd ../..
 cd bionic
 patch -p1 < ../device/CUBOT/Rainbow/patches/bionic/0001-Apply-LIBC-version-to-__pthread_gettid.patch

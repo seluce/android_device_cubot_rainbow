@@ -3,6 +3,9 @@ cd ../../../..
 cd packages/apps/Settings
 git reset --hard && git clean -fd
 cd ../../..
+cd packages/apps/FMRadio
+git reset --hard && git clean -fd
+cd ../../..
 cd system/core
 git reset --hard && git clean -fd
 cd ../..
