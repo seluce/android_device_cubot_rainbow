@@ -14,18 +14,9 @@ Device Tree for LineageOS 14.1
 
 Bug	tracker
 ---------------
-- [x] battery drain on daily use (compared to earlier version)
-- [x] bluetooth (A2DP) sound on speakers
-- [x] Can not connect to hidden WIFI / WPS
-- [x] Import contacts from sim card
-- [x] Some apps fast crash
-- [x] Blackscreen after unlock
-- [x] GPS with device only
-- [x] FM Radio
-- [x] ril is not stable
 - [ ] Video recording inverted color (workarround: any third party camera)
-- [ ] some Media Codecs does not work on Nougat 
-- [ ] some app glitches are present (app crashes has been fixed, glitches are left)
+- [ ] Some Media Codecs does not work on Nougat 
+- [ ] Some app glitches are present (app crashes has been fixed, glitches are left)
 
 Result
 ---------------
