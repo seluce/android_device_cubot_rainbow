@@ -107,7 +107,7 @@ WIFI_DRIVER_FW_PATH_AP := AP
 WIFI_DRIVER_FW_PATH_P2P := P2P
 
 # build old-style zip files (required for ota updater)
-BLOCK_BASED_OTA := false
+BLOCK_BASED_OTA := true
 
 # make_ext4fs requires numbers in dec format
 TARGET_USERIMAGES_USE_EXT4 := true
