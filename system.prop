@@ -34,7 +34,7 @@ ro.sys.usb.mtp.whql.enable=0
 # Power off opt in IPO
 sys.ipo.pwrdncap=2
 
-F
+# USB MTP / ADB Mode 
 persist.sys.usb.config=mtp
 
 # USB BICR function
