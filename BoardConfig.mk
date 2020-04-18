@@ -130,7 +130,7 @@ POLICYVERS := 29
 BOARD_SECCOMP_POLICY += device/CUBOT/Rainbow/seccomp
 
 # build old-style zip files (required for ota updater)
-BLOCK_BASED_OTA := false
+BLOCK_BASED_OTA := true
 
 TARGET_LDPRELOAD += libxlog.so:libmtk_symbols.so
 
