@@ -74,7 +74,7 @@ persist.sys.button_jack_switch=0
 
 persist.tone_relative_volume=100
 ro.mediatek.chip_ver=S01
-ro.mediatek.version.release=alps-mp-m0.mp1-V2.34_vz6580.we.i.m_P157
+ro.mediatek.version.release=alps-mp-m0.mp1-V2.34_vz6580.we.i.m_P192
 ro.mediatek.platform=MT6580
 ro.telephony.sim.count=2
 persist.radio.default.sim=0
