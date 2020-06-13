@@ -1,8 +1,8 @@
 #!/bin/bash
 cd ../../../..
 cd packages/apps/Settings
-patch -p1 < ../../../device/CUBOT/Rainbow/patches/packages_apps_settings/0001-add-MiraVision-in-Settings.patch
-patch -p1 -b < ../../../device/CUBOT/Rainbow/patches/packages_apps_settings/0002-android_settings_developer_info.patch
+patch -p1 < ../../../device/CUBOT/Rainbow/patches/packages_apps_Settings/0001-add-MiraVision-in-Settings.patch
+patch -p1 -b < ../../../device/CUBOT/Rainbow/patches/packages_apps_Settings/0002-android_settings_developer_info.patch
 git clean -f -d
 cd ../../..
 cd packages/apps/FMRadio
