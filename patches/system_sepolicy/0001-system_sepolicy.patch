@@ -1,8 +1,9 @@
-From cac8d95915983ba549c63fa45515c7aa8473954d Mon Sep 17 00:00:00 2001
-From: podkopaew <podkopaew@list.ru>
-Date: Mon, 30 Oct 2017 18:21:08 +0000
+From ff7a8454a79ec5baaa9f471760d050dd1249d532 Mon Sep 17 00:00:00 2001
+From: seluce <ferris.daehn@outlook.de>
+Date: Sun, 26 Jul 2020 17:35:08 +0200
 Subject: [PATCH] system_sepolicy
 
+Change-Id: I4419ae5effbcd799bfdcd32953b3bcee83953fee
 ---
  app.te            | 4 ++--
  domain.te         | 2 +-
@@ -15,7 +16,7 @@ Subject: [PATCH] system_sepolicy
  8 files changed, 15 insertions(+), 15 deletions(-)
 
 diff --git a/app.te b/app.te
-index ca0cba3..ab0d921 100644
+index 93fe3a4..5fa3c35 100644
 --- a/app.te
 +++ b/app.te
 @@ -244,8 +244,8 @@ use_keystore({ appdomain -isolated_app })
@@ -30,7 +31,7 @@ index ca0cba3..ab0d921 100644
  allow { appdomain -isolated_app } ion_device:chr_file rw_file_perms;
  
 diff --git a/domain.te b/domain.te
-index 0bcb687..810e1e5 100644
+index fbd6c26..7686dd1 100644
 --- a/domain.te
 +++ b/domain.te
 @@ -28,7 +28,7 @@ r_dir_file(domain, self)
@@ -79,7 +80,7 @@ index d9368ad..3ef8830 100644
 -neverallowxperm mediadrmserver domain:{ rawip_socket tcp_socket udp_socket } ioctl priv_sock_ioctls;
 +#neverallowxperm mediadrmserver domain:{ rawip_socket tcp_socket udp_socket } ioctl priv_sock_ioctls;
 diff --git a/mediaserver.te b/mediaserver.te
-index 661bdee..32e4951 100644
+index 661bdee..985d64f 100644
 --- a/mediaserver.te
 +++ b/mediaserver.te
 @@ -117,8 +117,8 @@ allow mediaserver drmserver:drmservice {
@@ -93,12 +94,15 @@ index 661bdee..32e4951 100644
  
  # Access to /data/media.
  # This should be removed if sdcardfs is modified to alter the secontext for its
-@@ -138,4 +138,4 @@ allow mediaserver preloads_data_file:file { getattr read ioctl };
+@@ -138,7 +138,7 @@ allow mediaserver preloads_data_file:file { getattr read ioctl };
  neverallow mediaserver { file_type fs_type }:file execute_no_trans;
  
  # do not allow privileged socket ioctl commands
 -neverallowxperm mediaserver domain:{ rawip_socket tcp_socket udp_socket } ioctl priv_sock_ioctls;
-+#neverallowxperm mediaserver domain:{ rawip_socket tcp_socket udp_socket } ioctl priv_sock_ioctls;
++# neverallowxperm mediaserver domain:{ rawip_socket tcp_socket udp_socket } ioctl priv_sock_ioctls;
+ 
+ # Themed resources (i.e. composed icons)
+ allow mediaserver theme_data_file:dir r_dir_perms;
 diff --git a/priv_app.te b/priv_app.te
 index 85516a6..aab4b20 100644
 --- a/priv_app.te
@@ -126,7 +130,7 @@ diff --git a/untrusted_app.te b/untrusted_app.te
 index 1089e61..8941a47 100644
 --- a/untrusted_app.te
 +++ b/untrusted_app.te
-@@ -158,8 +158,8 @@ neverallow untrusted_app sysfs_mac_address:file no_rw_file_perms;
+@@ -161,8 +161,8 @@ neverallow untrusted_app sysfs_mac_address:file no_rw_file_perms;
  
  # Restrict socket ioctls. Either 1. disallow privileged ioctls, 2. disallow the
  # ioctl permission, or 3. disallow the socket class.
@@ -138,4 +142,5 @@ index 1089e61..8941a47 100644
    socket netlink_socket packet_socket key_socket appletalk_socket
    netlink_firewall_socket netlink_tcpdiag_socket netlink_nflog_socket
 -- 
-1.9.1
+2.7.4
+
