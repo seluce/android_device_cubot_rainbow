@@ -21,8 +21,8 @@ patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_av/0001-frameworks_av.
 cd ../..
 cd frameworks/base
 # only use the optional patch for LineageOS and /e/ to fix MicroG signature spoofing
-# patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0001-frameworks_base_signature_spoofing.patch
-# git clean -f -d
+patch -p1 < ../../device/CUBOT/Rainbow/patches/frameworks_base/0001-frameworks_base_signature_spoofing.patch
+git clean -f -d
 cd ../..
 cd external/wpa_supplicant_8
 patch -p1 < ../../device/CUBOT/Rainbow/patches/external_wpa_supplicant_8/0001-Ignore-fake-nvram-wifi.patch
